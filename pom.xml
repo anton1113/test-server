@@ -7,29 +7,51 @@
     <groupId>com.arash.server</groupId>
     <artifactId>com.arash.server</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <spring-core.version>4.3.9.RELEASE</spring-core.version>
+        <javax.servlet-api.version>4.0.0-b07</javax.servlet-api.version>
+        <spring-data-jpa.version>1.11.4.RELEASE</spring-data-jpa.version>
+        <hibernate-core.version>5.2.10.Final</hibernate-core.version>
+        <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
+    </properties>
     <packaging>war</packaging>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>${spring-core.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>${spring-core.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.0-b07</version>
+            <version>${javax.servlet-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data-jpa.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
         </dependency>
 
     </dependencies>
