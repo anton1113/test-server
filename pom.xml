@@ -10,10 +10,11 @@
     <properties>
         <spring-core.version>4.3.9.RELEASE</spring-core.version>
         <javax.servlet-api.version>4.0.0-b07</javax.servlet-api.version>
-        <spring-data-jpa.version>1.11.4.RELEASE</spring-data-jpa.version>
+        <spring-data-jpa.version>${jta.version}1.4.RELEASE</spring-data-jpa.version>
         <hibernate-core.version>5.2.10.Final</hibernate-core.version>
         <postgresql.version>9.1-901-1.jdbc4</postgresql.version>
-        <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+        <commons-dbcp2.version>2.${jta.version}</commons-dbcp2.version>
+        <jta.version>1.1</jta.version>
     </properties>
     <packaging>war</packaging>
 
@@ -63,6 +64,11 @@
             <version>${commons-dbcp2.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>${jta.version}</version>
+        </dependency>
 
     </dependencies>
 
